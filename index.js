@@ -42,7 +42,7 @@ const camelCaseConvert = (input, options) => {
 			const path = parentPath === undefined ? key : `${parentPath}.${key}`;
 
 			if (!stopPathsSet.has(path)) {
-				value = mapObject(value, makeMapper(path));
+				value = mapObject.default(value, makeMapper(path));
 			}
 		}
 
@@ -65,7 +65,7 @@ const camelCaseConvert = (input, options) => {
 		return [key, value];
 	};
 
-	return mapObject(input, makeMapper(undefined));
+	return mapObject.default(input, makeMapper(undefined));
 };
 
 export default function camelcaseKeys(input, options) {

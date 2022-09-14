@@ -1,8 +1,6 @@
-import * as mapObjectLib from 'map-obj';
+import * as mapObject from 'map-obj';
 import camelCase from 'camelcase';
 import QuickLru from 'quick-lru';
-
-const mapObject = mapObjectLib.default
 
 const has = (array, key) => array.some(element => {
 	if (typeof element === 'string') {
